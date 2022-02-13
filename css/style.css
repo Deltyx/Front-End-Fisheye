@@ -1,8 +1,22 @@
 @import url("photographer.css");
 
+/* Colors */
+
+:root {
+    --primary-color-back: #901C1C;
+    --primary-color-text: #D3573C;
+    --secondary-color-back: #D3573C;
+    --secondary-color-text: #901C1C;
+    --transparant-color: #FAFAFA;
+    --dark-color: #525252;
+}
+
+
 body {
     font-family: "DM Sans", sans-serif;
     margin: 0;
+    padding: 0;
+    max-width: 1900px;
 }
 
 
@@ -14,24 +28,25 @@ header {
     height: 90px;
 }
 
-h1 {
-    color: #901C1C;
-    margin-right: 100px;
-}
-
 .logo {
     height: 50px;
     margin-left: 100px;
 }
 
+.info {
+    color: var(--primary-color-back);
+    font-size: 30px;
+    margin-right: 100px;
+}
+
 .photographer_section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 70px;
+    gap: 3em;
     margin-top: 100px;
 }
 
-.photographer_section article {
+.profile_article {
     justify-self: center;
     display: flex;
     justify-content: center;
@@ -39,9 +54,45 @@ h1 {
     flex-direction: column;
 }
 
-.photographer_section article h2 {
-    color: #D3573C;
-    font-size: 36px;
+.profile_article > * {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: normal;
+}
+
+.profile_name {
+    color: var(--primary-color-text);
+    font-size: 32px;
+    margin-top:15px;
+}
+
+.profile_link .profile_img {
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+.profile_img {
+    object-fit: cover;
+}
+
+.profile_img:hover {
+    transform: scale(1.05);
+}
+
+.profile_location {
+    color: var(--secondary-color-text);
+    font-size: 16px;
+}
+
+.profile_tagline {
+    color: var(--dark-color);
+    font-size: 14px;
+}
+
+.profile_price {
+    color: lightgray;
+    font-size: 12px;
 }
 
 .photographer_section article img {
