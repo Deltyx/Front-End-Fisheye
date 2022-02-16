@@ -4,6 +4,9 @@ function photographerFactory(data) {
     const picture = `assets/photographers/${portrait}`;
 
     function getUserCardDOM() {
+        let html = '';
+
+        
         const article = document.createElement( 'article' );
         const img = document.createElement( 'img' );
         const pht = document.createElement( 'h2' );

@@ -1,8 +1,20 @@
 //Mettre le code JavaScript lié à la page photographer.html
-/*
-async function displayCurrentProfile()
-{
-    let url = document.URL;
-    let id = url.substring(url.lastIndexOf('=') + 1);
+function getId() {
+    return new Proxy(new URLSearchParams(window.location.search), 
+        { get: (searchParams, prop) => searchParams.get(prop) }).id;  
 }
-*/
+
+
+
+async function init() {
+
+    const id = getId();
+    const { data } = await getData();
+    //const medias = data.filter(data => data.photographerId == id);
+
+    console.log(id);
+    console.log(data);
+    //console.log(medias);
+};
+
+init();
