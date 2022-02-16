@@ -13,13 +13,11 @@ async function init() {
     const id = getId();
     const data = await getData();
     const medias = data.media.filter(data => data.photographerId == id);
-    const profile = data.photographers.filter(data => data.id == id);
-    const Profile = new Photographer(profile); 
+    const Profile = new Photographer(data.photographers.filter(data => data.id == id)[0]); 
 
     console.log(id);
     console.log(data);
     console.log(medias);
-    console.log(profile);
     console.log(Profile);
 };
 
