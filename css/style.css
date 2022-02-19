@@ -103,3 +103,18 @@ header {
     align-self: center;
     justify-content: space-evenly;
 }
+
+.photograph-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px 100px
+}
+
+.photograph-gallery > * {
+    margin: 10px 25px
+}
+
+.gallery_img {
+    height: 400px;
+    width: 400px;
+}

@@ -25,9 +25,10 @@ async function init() {
 
     document.getElementById('banner').innerHTML = thisPortfolio.renderProfile();
     document.getElementById('gallery').innerHTML = thisPortfolio.renderGallery();
+    document.getElementById('info').innerHTML = thisPortfolio.renderTotalLikes();
 
     console.log(thisPortfolio);
-    console.log(thisPortfolio.calcLike());
+    console.log(thisPortfolio.renderTotalLikes());
     console.log(thisPortfolio.renderProfile());
     console.log(thisPortfolio.renderGallery());
 };
