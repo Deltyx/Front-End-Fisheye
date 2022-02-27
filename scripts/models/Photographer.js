@@ -1,4 +1,4 @@
-class Photographer {
+export class Photographer {
     constructor(photographer) {
         this.name = photographer.name;
         this.id = photographer.id;

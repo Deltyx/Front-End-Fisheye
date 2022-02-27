@@ -47,9 +47,7 @@ header {
 }
 
 .profile_article {
-    justify-self: center;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -66,6 +64,34 @@ header {
     margin-top:15px;
 }
 
+.profile_info {
+    margin-left: 40px;
+    margin-right:-75px;
+    width: 315px;
+}
+
+.profile_info > * {
+    margin:10px;
+}
+
+.profile_info h2 {
+    color: var(--primary-color-text);
+    font-size: 64px;
+    font-weight: normal;
+}
+
+.profile_info h3 {
+    color: var(--secondary-color-text);
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.profile_info h4 {
+    color: var(--dark-color);
+    font-size: 16px;
+    font-weight: normal;
+}
+
 .profile_link, .profile_img {
     height: 200px;
     width: 200px;
@@ -74,6 +100,7 @@ header {
 
 .profile_img {
     object-fit: cover;
+    margin-right: 50px;
 }
 
 .profile_img:hover {
@@ -97,24 +124,91 @@ header {
 
 .photograph-header  {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
 }
 
 .photograph-header > * {
     align-self: center;
-    justify-content: space-evenly;
 }
 
 .photograph-gallery {
     display: flex;
     flex-wrap: wrap;
-    margin: 25px 100px
+    justify-content: space-between;
+    margin: 0 100px;
 }
 
-.photograph-gallery > * {
-    margin: 10px 25px
+.gallery_article {
+    margin: 25px 0;
 }
 
-.gallery_img {
+.gallery_item {
     height: 400px;
     width: 400px;
+    object-fit: cover;
+    border-radius: 5px;
 }
+
+.gallery_item_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.gallery_item_likes {
+    display: flex;
+    justify-items: center;
+}
+
+.gallery_item_likes i {
+    margin-left: 5px;
+    margin-top: 3px;
+    font-size: 22px;
+    color: var(--secondary-color-text);
+}
+
+.gallery_item_info h3 {
+    margin:0px;
+    color: var(--secondary-color-text);
+    max-width: 300px;
+}
+
+.photograph-info {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 35px;
+    position: fixed;
+    right: 40px;
+    bottom: 0px;
+}
+
+.profile_sub_info {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 300px;
+    height: 50px;
+    background-color: var(--secondary-color-back);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.profile_sub_info h3 {
+    align-self: center;
+}
+
+.profile_sub_info--likes {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+
+.profile_sub_info--likes i{
+    font-size: 22px;
+    margin-top: 14px;
+    margin-left: 5px;
+} 
