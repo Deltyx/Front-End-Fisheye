@@ -11,4 +11,14 @@ export class Media {
         this.isLiked = false;
     }
 
+    likeMedia() {
+        if(this.isLiked == true) {
+            this.isLiked = false;
+            this.like -= 1;
+        } else {
+            this.isLiked = true;
+            this.like += 1;
+        }
+    }
+
 }

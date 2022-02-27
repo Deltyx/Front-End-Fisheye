@@ -31,6 +31,40 @@ export class Portfolio {
                 `
     }
 
+    renderFilter(state) {
+        if (state == "Popularity") {
+            return `
+            <div class="dropdown_filter">
+            <button class="filter_btn">Popularité</button>
+                <div class="dropdown-content">
+                <a href="#">Date</a>
+                <a href="#">Titre</a>
+                </div>
+            </div> 
+            `
+        } else if (state == "Date") {
+            return `
+            <div class="dropdown_filter">
+            <button class="filter_btn">Date</button>
+                <div class="dropdown-content">
+                <a href="#">Titre</a>
+                <a href="#">Popularité</a>
+                </div>
+            </div> 
+            `
+        } else {
+            return `
+            <div class="dropdown_filter">
+            <button class="filter_btn">Titre</button>
+                <div class="dropdown-content">
+                <a href="#">Popularité</a>
+                <a href="#">Date</a>
+                </div>
+            </div> 
+            `
+        }
+    }
+
     renderGallery() {
         let html = '';
 

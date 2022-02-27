@@ -139,6 +139,15 @@ header {
     margin: 0 100px;
 }
 
+.gallery_filter {
+    display: flex;
+    margin: 0 100px;
+}
+
+.dropdown_filter {
+    margin-left: 15px;
+}
+
 .gallery_article {
     margin: 25px 0;
 }
