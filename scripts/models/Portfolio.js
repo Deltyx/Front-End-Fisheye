@@ -1,6 +1,8 @@
-export class Portfolio {
-    constructor(photographer, media) {
-        this.allMedia = media;
+import MediaFactory from "../factories/MediaFactory.js";
+
+export default class Portfolio {
+    constructor(photographer) {
+        this.allMedia = [];
         this.photographer = photographer;
         this.totalLikes = 0;
     }
@@ -17,6 +19,20 @@ export class Portfolio {
 
     calcTotalLikes() {
         this.totalLikes = this.allMedia.reduce((total, media) => total += media.likes, 0);
+    }
+
+    hydrate(data) {
+        let factory = new MediaFactory();
+        const medias = data.filter(data => data.photographerId == this.photographer.id);
+        medias.forEach(media => {
+            this.allMedia.push(factory.build(media, this.photographer));
+        })
+    }
+
+    display() {
+        this.displayProfile();
+        this.displayGallery();
+        this.displayTotalLikes();
     }
 
     renderProfile() {
@@ -70,37 +86,7 @@ export class Portfolio {
 
         this.allMedia.forEach(media =>
             {
-                if(media.video)
-                {
-                    html += `
-                    <article class="gallery_article">
-                        <video class="gallery_item" controls>
-                            <source src="assets/images/${this.photographer.name}/${media.video}" type="video/mp4">
-                            Votre navigateur ne supporte pas les vidéos HTML.
-                        </video>
-                        <div class="gallery_item_info">
-                            <h3>${media.title}</h3>
-                            <div class="gallery_item_likes">
-                                <h3>${media.likes}</h3>
-                                <i class="fas fa-heart"></i> 
-                            </div> 
-                        </div>
-                    </article>                     
-                        `
-                } else {
-                    html += `
-                    <article class="gallery_article">
-                        <img class="gallery_item" src="assets/images/${this.photographer.name}/${media.image}"></img>
-                        <div class="gallery_item_info">
-                            <h3>${media.title}</h3>
-                            <div class="gallery_item_likes">
-                                <h3>${media.likes}</h3>
-                                <i class="fas fa-heart"></i> 
-                            </div>
-                        </div>
-                    </article>                     
-                        `
-                }
+                html += media.render();
             });
 
         return html;

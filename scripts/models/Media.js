@@ -1,10 +1,8 @@
-export class Media {
-    constructor(media) {
+export default class Media {
+    constructor(media, photographer) {
         this.id = media.id;
-        this.photographerId = media.photographerId;
+        this.photographer = photographer;
         this.title = media.title;
-        this.image = media.image;
-        this.video = media.video;
         this.likes = media.likes;
         this.date = media.date;
         this.price = media.price;
