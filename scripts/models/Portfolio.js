@@ -22,7 +22,8 @@ export default class Portfolio {
         this.displayGallery();
     }
 
-    sortbyDate() {
+    sortByDate() {
+        this.allMedia.sort((a, b) => new Date(a.date) - new Date(b.date));
         this.displayGallery();
     }
 
@@ -58,7 +59,7 @@ export default class Portfolio {
 
     listen() {
         this.listenDropdown();
-        this.listenForLikes();
+        //this.listenForLikes();
     }
 
     listenDropdown() {
