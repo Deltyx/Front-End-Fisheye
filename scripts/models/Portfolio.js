@@ -59,7 +59,6 @@ export default class Portfolio {
 
     listen() {
         this.listenDropdown();
-        this.listenForLikes();
     }
 
     listenDropdown() {
@@ -75,7 +74,7 @@ export default class Portfolio {
                     this[methodName]();
                     btn.style.display = 'block';
                     btn_dropdown.style.display = 'none';
-                    //btn.innerText = this.options.order;
+                    btn.innerText = this.options[order.toLowerCase()];
                 })
             })
         })
