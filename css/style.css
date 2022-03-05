@@ -221,3 +221,53 @@ header {
     margin-top: 14px;
     margin-left: 5px;
 } 
+
+.filter_button {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 11px;
+    width: 170px;
+    height: 70px;
+    border: none;
+    background-color: #901C1C;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: start;
+    margin-left: 15px;
+}
+
+.filter_list_content {
+    font-size: 20px;
+    display: none;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 170px;
+    height: 210px;
+    border: none;
+    background-color: #901C1C;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.filter_button-options {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 11px;
+    width: 170px;
+    height: 70px;
+    border: none;
+    background-color: #901C1C;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: start;
+}
+
+.filter_separator {
+    height: 2px;
+    background-color: white;
+}

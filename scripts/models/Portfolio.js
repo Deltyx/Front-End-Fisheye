@@ -5,15 +5,24 @@ export default class Portfolio {
         this.allMedia = [];
         this.photographer = photographer;
         this.totalLikes = 0;
+        this.options = {
+            title: 'Titre',
+            popularity: 'Popularité',
+            date: 'Date'
+        };
     }
 
-    sortByLikes() {
+    sortByPopularity() {
         this.allMedia.sort((a, b) => b.likes - a.likes);
         this.displayGallery()
     }
 
     sortByTitle() {
         this.allMedia.sort((a, b) => a.title.localeCompare(b.title));
+        this.displayGallery();
+    }
+
+    sortbyDate() {
         this.displayGallery();
     }
 
@@ -49,14 +58,25 @@ export default class Portfolio {
 
     listen() {
         this.listenDropdown();
+        this.listenForLikes();
     }
 
     listenDropdown() {
-        let btn = document.getElementById('current-filter');
-        let options = document.getElementById('filter-options');
+        let btn = document.getElementById('filter_btn');
+        let btn_dropdown = document.getElementById('filter_dropdown');
         btn.addEventListener('click', () => {
             btn.style.display = 'none';
-            options.style.display = 'block';
+            btn_dropdown.style.display = 'block';
+            document.querySelectorAll('.filter_button-options').forEach(options => {
+                options.addEventListener('click', () => {
+                    let order = options.getAttribute('data-filter');
+                    let methodName = 'sortBy' + order;
+                    this[methodName]();
+                    btn.style.display = 'block';
+                    btn_dropdown.style.display = 'none';
+                    //btn.innerText = this.options.order;
+                })
+            })
         })
     }
 

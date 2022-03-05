@@ -15,6 +15,7 @@ async function init() {
 
     portfolio.hydrate(data.media);
     portfolio.display();
+    portfolio.listen();
 
 };
 

@@ -10,13 +10,12 @@ export default class Media {
     }
 
     likeMedia() {
-        if(this.isLiked == true) {
-            this.isLiked = false;
+        if(this.isLiked) {
             this.like -= 1;
         } else {
-            this.isLiked = true;
             this.like += 1;
         }
+        this.isLiked = ! this.isLiked;
     }
 
 }
