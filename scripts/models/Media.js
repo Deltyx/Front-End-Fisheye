@@ -11,9 +11,9 @@ export default class Media {
 
     likeMedia() {
         if(this.isLiked) {
-            this.like -= 1;
+            this.likes -= 1;
         } else {
-            this.like += 1;
+            this.likes += 1;
         }
         this.isLiked = ! this.isLiked;
     }

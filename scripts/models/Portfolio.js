@@ -59,7 +59,7 @@ export default class Portfolio {
 
     listen() {
         this.listenDropdown();
-        //this.listenForLikes();
+        this.listenForLikes();
     }
 
     listenDropdown() {
@@ -77,6 +77,16 @@ export default class Portfolio {
                     btn_dropdown.style.display = 'none';
                     //btn.innerText = this.options.order;
                 })
+            })
+        })
+    }
+
+    listenForLikes() {
+        this.allMedia.forEach(media => {
+            document.querySelector(`article[id='${media.id}'] .fas`).addEventListener('click', () => {
+                media.likeMedia();
+                this.displayGallery();
+                this.displayTotalLikes();
             })
         })
     }
@@ -111,6 +121,7 @@ export default class Portfolio {
 
     displayGallery() {
         document.getElementById('gallery').innerHTML = this.renderGallery();
+        this.listenForLikes();
     }
 
     displayTotalLikes() {

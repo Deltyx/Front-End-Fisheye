@@ -239,10 +239,8 @@ header {
 
 .filter_list_content {
     font-size: 20px;
-    display: none;
     font-weight: bold;
-    display: flex;
-    flex-direction: column;
+    display: none;
     color: white;
     width: 170px;
     height: 210px;
