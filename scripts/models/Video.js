@@ -23,4 +23,13 @@ export default class Video extends Media {
         </article>                     
         `
     }
+    renderSlider() {
+        return ` 
+        <video class="gallery_item" controls>
+            <source src="assets/images/${this.photographer.name}/${this.video}" type="video/mp4">
+            Votre navigateur ne supporte pas les vidéos HTML.
+        </video>
+        <h3>${this.title}</h3>
+        `
+    }
 }

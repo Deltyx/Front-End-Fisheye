@@ -59,6 +59,7 @@ export default class Portfolio {
 
     listen() {
         this.listenDropdown();
+        this.listenForSlider();
     }
 
     listenDropdown() {
@@ -87,6 +88,26 @@ export default class Portfolio {
                 this.displayGallery();
                 this.displayTotalLikes();
             })
+        })
+    }
+
+    listenForImg() {
+        this.allMedia.forEach(media => {
+            document.querySelector(`article[id='${media.id}']`).addEventListener('click', () => {
+                this.displaySlider(media.renderSlider());
+            })
+        })
+    }
+
+    listenForSlider() {
+        document.getElementById('slider-left').addEventListener('click', () => {
+            console.log('<= LEFT <=')
+        })
+        document.getElementById('slider-right').addEventListener('click', () => {
+            console.log('=> RIGHT =>')
+        })
+        document.getElementById('slider-cross').addEventListener('click', () => {
+            document.getElementById('slider').style.display = 'none';
         })
     }
 
@@ -121,9 +142,15 @@ export default class Portfolio {
     displayGallery() {
         document.getElementById('gallery').innerHTML = this.renderGallery();
         this.listenForLikes();
+        this.listenForImg();
     }
 
     displayTotalLikes() {
         document.getElementById('info').innerHTML = this.renderTotalLikes();
+    }
+
+    displaySlider(data) {
+        document.getElementById('slider').style.display = 'flex';
+        document.getElementById('slider-img').innerHTML = data;
     }
 }

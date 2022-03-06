@@ -142,6 +142,7 @@ header {
 .gallery_filter {
     display: flex;
     margin: 0 100px;
+    height: 70px;
 }
 
 .dropdown_filter {
@@ -249,6 +250,8 @@ header {
     border-radius: 5px;
     cursor: pointer;
     margin-left: 15px;
+    z-index: 2;
+    margin-bottom: -180px;
 }
 
 .filter_button-options {
@@ -266,6 +269,37 @@ header {
 }
 
 .filter_separator {
-    height: 2px;
+    height: 1px;
     background-color: white;
+    width: 85%;
+    margin-left: 7.5%;
+}
+
+.gallery_slider {
+    position: fixed;
+    z-index: 3;
+    height: 75%;
+    width: 75%;
+    top: 0;
+    left: 0;
+    display: none;
+    background-color: var(--dark-color);
+}
+
+.gallery_slider-left {
+    background-color: violet;
+    width: 60px;
+    height: 100%;
+}
+
+.gallery_slider-right {
+    background-color: violet;
+    width: 60px;
+    height: 100%;
+}
+
+.gallery_slider-cross {
+    background-color: red;
+    width: 60px;
+    height: 60px;
 }

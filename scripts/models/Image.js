@@ -20,5 +20,10 @@ export default class Image extends Media {
         </article>                     
         `
     }
-
+    renderSlider() {
+        return ` 
+        <img class="gallery_item" src="assets/images/${this.photographer.name}/${this.image}"></img>
+        <h3>${this.title}</h3>
+        `
+    }
 }
