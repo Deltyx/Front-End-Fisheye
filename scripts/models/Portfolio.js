@@ -93,18 +93,37 @@ export default class Portfolio {
 
     listenForImg() {
         this.allMedia.forEach(media => {
-            document.querySelector(`article[id='${media.id}']`).addEventListener('click', () => {
-                this.displaySlider(media.renderSlider());
+            document.querySelector(`article[id='${media.id}'] .gallery_item`).addEventListener('click', () => {
+                this.currentIndex = this.allMedia.findIndex(item => media.id == item.id);
+                this.displaySlider();
             })
         })
     }
 
+    goToNext() {
+        if(this.currentIndex == this.allMedia.length-1) {
+            this.currentIndex = 0;
+        } else {
+            this.currentIndex++;
+        }
+        this.displaySlider();
+    }
+
+    goToPrevious() {
+        if(this.currentIndex == 0) {
+            this.currentIndex = this.allMedia.length - 1;
+        } else {
+            this.currentIndex--;
+        }
+        this.displaySlider(); 
+    }
+
     listenForSlider() {
         document.getElementById('slider-left').addEventListener('click', () => {
-            console.log('<= LEFT <=')
+            this.goToPrevious();
         })
         document.getElementById('slider-right').addEventListener('click', () => {
-            console.log('=> RIGHT =>')
+            this.goToNext();
         })
         document.getElementById('slider-cross').addEventListener('click', () => {
             document.getElementById('slider').style.display = 'none';
@@ -149,8 +168,9 @@ export default class Portfolio {
         document.getElementById('info').innerHTML = this.renderTotalLikes();
     }
 
-    displaySlider(data) {
+    displaySlider() {
         document.getElementById('slider').style.display = 'flex';
-        document.getElementById('slider-img').innerHTML = data;
+        let media = this.allMedia[this.currentIndex];
+        document.getElementById('slider-img').innerHTML = media.renderSlider();
     }
 }

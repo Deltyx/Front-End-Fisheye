@@ -10,7 +10,7 @@ export default class Video extends Media {
         return `
         <article class="gallery_article" id="${this.id}">
             <video class="gallery_item" controls>
-                <source src="assets/images/${this.photographer.name}/${this.video}" type="video/mp4">
+                <source src="assets/images/${this.photographer.name}/${this.video}" type="video/mp4" alt="${this.video}">
                 Votre navigateur ne supporte pas les vidéos HTML.
             </video>
             <div class="gallery_item_info">
@@ -25,8 +25,8 @@ export default class Video extends Media {
     }
     renderSlider() {
         return ` 
-        <video class="gallery_item" controls>
-            <source src="assets/images/${this.photographer.name}/${this.video}" type="video/mp4">
+        <video class="slider_item" controls>
+            <source src="assets/images/${this.photographer.name}/${this.video}" type="video/mp4" alt="${this.video}">
             Votre navigateur ne supporte pas les vidéos HTML.
         </video>
         <h3>${this.title}</h3>

@@ -27,23 +27,35 @@
       </section>
       <section class="photograph-gallery"id="gallery"></section>
       <section class="gallery_slider" id="slider">
-        <div class="gallery_slider-left" id="slider-left"></div>
+        <i class="fas fa-chevron-left" id="slider-left"></i>
         <div class="gallery_slider-img" id="slider-img"></div>
-        <div class="gallery_slider-right" id="slider-right"></div>
-        <div class="gallery_slider-cross" id="slider-cross"></div>
+        <i class="fas fa-chevron-right" id="slider-right"></i>
+        <i class="fa-regular fa-xmark gallery_slider-cross" id="slider-cross"></i>
       </section>
       <section class="photograph-info"id="info"></section>
     </main>
-    <div id="contact_modal">
+    <div id="contact_modal" class="contact_form">
 			<div class="modal">
 				<header>
           <h2>Contactez-moi</h2>
           <img src="assets/icons/close.svg" onclick="closeModal()" />
         </header>
-				<form>
+				<form id='form' onsubmit="return validate()">
 					<div>
 						<label>Prénom</label>
-						<input />
+						<input type="text" id="first_name" />
+					</div>
+          <div>
+						<label>Nom</label>
+						<input type="text" id="last_name" />
+					</div>
+          <div>
+						<label>Email</label>
+						<input type="text" id="email" />
+					</div>
+          <div>
+						<label>Votre message</label>
+						<textarea type="text" cols="40" rows="8" id="message" class="message_box"></textarea>
 					</div>
           <button class="contact_button">Envoyer</button>
 				</form>

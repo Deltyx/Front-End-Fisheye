@@ -33,6 +33,11 @@ header {
     margin-left: 100px;
 }
 
+.logo_link:focus {
+    border-color: var(--dark-color);
+    border-width: 10px;
+}
+
 .info {
     color: var(--primary-color-back);
     font-size: 30px;
@@ -96,6 +101,11 @@ header {
     height: 200px;
     width: 200px;
     border-radius: 50%;
+}
+
+.profile_link:focus, .profile_img:focus {
+    border-color: var(--dark-color);
+    border-width: 50px;
 }
 
 .profile_img {
@@ -278,28 +288,47 @@ header {
 .gallery_slider {
     position: fixed;
     z-index: 3;
-    height: 75%;
-    width: 75%;
+    height: 100vh;
+    width: 100vw;
     top: 0;
     left: 0;
     display: none;
-    background-color: var(--dark-color);
+    justify-content: center;
+    background-color: var(--transparant-color);
 }
 
-.gallery_slider-left {
-    background-color: violet;
-    width: 60px;
-    height: 100%;
+.gallery_slider-img h3 {
+    color: var(--secondary-color-text);
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 5px;;
 }
 
-.gallery_slider-right {
-    background-color: violet;
-    width: 60px;
-    height: 100%;
+.gallery_slider-left:focus,
+.gallery_slider-right:focus {
+    border-color: var(--dark-color);
+    border-width: 5px;
 }
 
 .gallery_slider-cross {
-    background-color: red;
     width: 60px;
     height: 60px;
+    margin-top: 45px;
+    cursor: pointer;
+    background-color: violet;
+}
+
+.slider_item {
+    height: 800px;
+    width: 800px;
+    object-fit: cover;
+    margin-top: 45px;
+}
+
+.fa-chevron-right,
+.fa-chevron-left {
+    font-size: 64px;
+    align-self: center;
+    margin: 0 20px;
+    cursor: pointer;
 }
