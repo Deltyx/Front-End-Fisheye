@@ -10,15 +10,21 @@
   </head>
   <body>
     <header>
-      <a href="index.html"><img src="assets/images/logo.png" class="logo"/></a>
+      <a class="logo_link" href="index.html"><img src="assets/images/logo.png" class="logo"/></a>
     </header>
     <main id="main">
       <section class="photograph-header" id="banner"></section>
       <section class="gallery_filter" id="filter">
         <h3>Tirer par</h3>
-        <button class="filter_button" id="filter_btn">Popularité</button>
+        <button class="filter_button" id="filter_btn">
+          Popularité
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
         <div class="filter_list_content" id="filter_dropdown">
-          <button class="filter_button-options" id="filter-options" data-filter="Popularity">Popularité</button>
+          <button class="filter_button-options" id="filter-options" data-filter="Popularity">
+            Popularité
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
           <div class="filter_separator"></div>
           <button class="filter_button-options" id="filter-options" data-filter="Date">Date</button>
           <div class="filter_separator"></div>
@@ -27,10 +33,10 @@
       </section>
       <section class="photograph-gallery"id="gallery"></section>
       <section class="gallery_slider" id="slider">
-        <i class="fas fa-chevron-left" id="slider-left"></i>
+        <i tabindex="1" class="fas fa-chevron-left" id="slider-left"></i>
         <div class="gallery_slider-img" id="slider-img"></div>
-        <i class="fas fa-chevron-right" id="slider-right"></i>
-        <i class="fa-regular fa-xmark gallery_slider-cross" id="slider-cross"></i>
+        <i tabindex="1" class="fas fa-chevron-right" id="slider-right"></i>
+        <div tabindex="1" class="gallery_slider-cross" id="slider-cross">&#10006;</div>
       </section>
       <section class="photograph-info"id="info"></section>
     </main>
@@ -38,7 +44,7 @@
 			<div class="modal">
 				<header>
           <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+          <img tabindex="0" src="assets/icons/close.svg" onclick="closeModal()" />
         </header>
 				<form id='form' onsubmit="return validate()">
 					<div>
@@ -57,7 +63,7 @@
 						<label>Votre message</label>
 						<textarea type="text" cols="40" rows="8" id="message" class="message_box"></textarea>
 					</div>
-          <button class="contact_button">Envoyer</button>
+          <button class="contact_button" type="submit">Envoyer</button>
 				</form>
 			</div>
 		</div>

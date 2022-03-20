@@ -9,12 +9,12 @@ export default class Image extends Media {
     render() {
         return `                    
         <article class="gallery_article" id="${this.id}">
-            <img class="gallery_item" src="assets/images/${this.photographer.name}/${this.image}" alt="${this.image}"></img>
+            <img tabindex="1" class="gallery_item" src="assets/images/${this.photographer.name}/${this.image}" alt="${this.image}"></img>
             <div class="gallery_item_info">
                 <h3>${this.title}</h3>
                 <div class="gallery_item_likes">
                     <h3>${this.likes}</h3>
-                    <i class="fas fa-heart"></i> 
+                    <i tabindex="1" class="fas fa-heart"></i> 
                 </div>
             </div>
         </article>                     

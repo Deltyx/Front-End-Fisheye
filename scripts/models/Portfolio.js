@@ -73,9 +73,12 @@ export default class Portfolio {
                     let order = options.getAttribute('data-filter');
                     let methodName = 'sortBy' + order;
                     this[methodName]();
-                    btn.style.display = 'block';
+                    btn.style.display = 'flex';
                     btn_dropdown.style.display = 'none';
-                    btn.innerText = this.options[order.toLowerCase()];
+                    btn.innerHTML = `
+                    ${this.options[order.toLowerCase()]}
+                    <i class="fa-solid fa-chevron-down"></i>
+                    `;
                 })
             })
         })
@@ -88,6 +91,11 @@ export default class Portfolio {
                 this.displayGallery();
                 this.displayTotalLikes();
             })
+            document.querySelector(`article[id='${media.id}'] .fas`).onkeydown = function(e) {
+                if(e.key === "Enter") { 
+                    document.activeElement.click();
+                }
+            }
         })
     }
 
@@ -119,15 +127,34 @@ export default class Portfolio {
     }
 
     listenForSlider() {
-        document.getElementById('slider-left').addEventListener('click', () => {
+        const sliderLeft = document.getElementById('slider-left');
+        const sliderRight = document.getElementById('slider-right');
+        const sliderCross = document.getElementById('slider-cross');
+        
+        sliderLeft.addEventListener('click', () => {
             this.goToPrevious();
         })
-        document.getElementById('slider-right').addEventListener('click', () => {
+        sliderRight.addEventListener('click', () => {
             this.goToNext();
         })
-        document.getElementById('slider-cross').addEventListener('click', () => {
+        sliderCross.addEventListener('click', () => {
             document.getElementById('slider').style.display = 'none';
         })
+        sliderLeft.onkeydown = function(e) {
+            if(e.key === "Enter") { 
+                document.activeElement.click();
+            }
+        };
+        sliderRight.onkeydown = function(e) {
+            if(e.key === "Enter") { 
+                document.activeElement.click();
+            }
+        };
+        sliderCross.onkeydown = function(e) {
+            if(e.key === "Enter") { 
+                document.activeElement.click();
+            }
+        };
     }
 
     renderGallery() {

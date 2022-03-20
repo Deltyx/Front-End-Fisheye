@@ -1,6 +1,7 @@
 function displayModal() {
     const modal = document.getElementById("contact_modal");
-	modal.style.display = "block";
+	  modal.style.display = "block";
+    document.getElementById('first_name').focus();
 }
 
 function closeModal() {
@@ -8,21 +9,10 @@ function closeModal() {
     modal.style.display = "none";
 }
 
-function validate() {
-    console.log(document.querySelector("#first_name").value);
-    console.log(document.querySelector("#last_name").value);
-    console.log(document.querySelector("#email").value);
-    console.log(document.querySelector("#message").value);
-    //console.log(document.querySelector("#form"));
-    document.querySelector("#form").submit(function(e){
-      e.preventDefault();
-    })
-  }
-
-/*
-document.onkeydown = function(e) {
-  if(e.key === "Enter") { 
-    document.activeElement.click();
-  }
-};
-*/
+document.getElementById('form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  console.log(document.querySelector("#first_name").value);
+  console.log(document.querySelector("#last_name").value);
+  console.log(document.querySelector("#email").value);
+  console.log(document.querySelector("#message").value);
+})

@@ -30,12 +30,10 @@ header {
 
 .logo {
     height: 50px;
-    margin-left: 100px;
 }
 
-.logo_link:focus {
-    border-color: var(--dark-color);
-    border-width: 10px;
+.logo_link {
+    margin-left: 100px;
 }
 
 .info {
@@ -66,7 +64,8 @@ header {
 .profile_name {
     color: var(--primary-color-text);
     font-size: 32px;
-    margin-top:15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .profile_info {
@@ -97,20 +96,28 @@ header {
     font-weight: normal;
 }
 
-.profile_link, .profile_img {
+.profile_img {
     height: 200px;
     width: 200px;
     border-radius: 50%;
 }
 
-.profile_link:focus, .profile_img:focus {
-    border-color: var(--dark-color);
-    border-width: 50px;
+.profile_link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none
+}
+
+.profile_link:focus, 
+.profile_img:focus,
+.logo_link:focus {
+    border: 2px solid var(--dark-color);
 }
 
 .profile_img {
     object-fit: cover;
-    margin-right: 50px;
 }
 
 .profile_img:hover {
@@ -136,6 +143,7 @@ header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    padding-right: 50px;
 }
 
 .photograph-header > * {
@@ -311,11 +319,13 @@ header {
 }
 
 .gallery_slider-cross {
-    width: 60px;
-    height: 60px;
-    margin-top: 45px;
+    width: 70px;
+    height: 70px;
+    margin-top: 40px;
     cursor: pointer;
-    background-color: violet;
+    font-size: 48px;
+    text-align: center;
+    color : var(--primary-color-back);
 }
 
 .slider_item {
@@ -331,4 +341,34 @@ header {
     align-self: center;
     margin: 0 20px;
     cursor: pointer;
+    color : var(--primary-color-back);
+}
+
+.contact_button:focus,
+.contact_button:hover {
+    color: black;
+    background-color: var(--secondary-color-back);
+}
+
+.filter_button:hover,
+.filter_button:focus,
+.filter_button-options:hover,
+.filter_button-options:focus {
+    color: black;
+    background-color: var(--secondary-color-back);
+}
+
+.fa-chevron-left:focus,
+.fa-chevron-right:focus,
+.gallery_slider-cross:focus,
+.gallery_item:focus,
+.fa-heart:focus {
+    border: 2px solid var(--dark-color);        
+}
+
+.filter_button,
+.filter_button-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
