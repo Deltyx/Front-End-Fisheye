@@ -176,6 +176,7 @@ header {
     width: 400px;
     object-fit: cover;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .gallery_item_info {
@@ -195,6 +196,7 @@ header {
     margin-top: 3px;
     font-size: 22px;
     color: var(--secondary-color-text);
+    cursor: pointer;
 }
 
 .gallery_item_info h3 {

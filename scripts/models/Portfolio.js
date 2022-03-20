@@ -52,7 +52,7 @@ export default class Portfolio {
                 <h3>${this.photographer.city}, ${this.photographer.country}</h3>
                 <h4>${this.photographer.tagline}</h4>
             </div>
-            <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+            <button class="contact_button" onclick="displayModal()" aria-label="Contactez moi">Contactez-moi</button>
             <img class="profile_img" src="assets/photographers/${this.photographer.portrait}" alt="${this.photographer.name}"></img>
                 `
     }
