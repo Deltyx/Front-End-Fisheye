@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <a class="logo_link" href="index.html"><img src="assets/images/logo.png" class="logo"/></a>
+      <a class="logo_link" href="index.html"><img src="assets/images/logo.png" alt="logo" class="logo"/></a>
     </header>
     <main id="main">
       <section class="photograph-header" id="banner"></section>
@@ -21,14 +21,14 @@
           <i class="fa-solid fa-chevron-down"></i>
         </button>
         <div class="filter_list_content" id="filter_dropdown">
-          <button class="filter_button-options" id="filter-options" data-filter="Popularity">
+          <button class="filter_button-options" id="filter-options-1" data-filter="Popularity">
             Popularité
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="filter_separator"></div>
-          <button class="filter_button-options" id="filter-options" data-filter="Date">Date</button>
+          <button class="filter_button-options" id="filter-options-2" data-filter="Date">Date</button>
           <div class="filter_separator"></div>
-          <button class="filter_button-options" id="filter-options" data-filter="Title">Titre</button>
+          <button class="filter_button-options" id="filter-options-3" data-filter="Title">Titre</button>
         </div> 
       </section>
       <section class="photograph-gallery"id="gallery"></section>
@@ -44,24 +44,24 @@
 			<div class="modal">
 				<header>
           <h2>Contactez-moi</h2>
-          <img tabindex="0" src="assets/icons/close.svg" onclick="closeModal()" />
+          <img tabindex="0" src="assets/icons/close.svg" alt="closing_cross" onclick="closeModal()" />
         </header>
 				<form id='form'>
 					<div>
 						<label>Prénom</label>
-						<input type="text" id="first_name" />
+						<input title="Prénom" type="text" id="first_name" />
 					</div>
           <div>
 						<label>Nom</label>
-						<input type="text" id="last_name" />
+						<input title="Nom" type="text" id="last_name" />
 					</div>
           <div>
 						<label>Email</label>
-						<input type="text" id="email" />
+						<input title="Email" type="text" id="email" />
 					</div>
           <div>
 						<label>Votre message</label>
-						<textarea type="text" cols="40" rows="8" id="message" class="message_box"></textarea>
+						<textarea title="Message" type="text" cols="40" rows="8" id="message" class="message_box"></textarea>
 					</div>
           <button class="contact_button" type="submit">Envoyer</button>
 				</form>
