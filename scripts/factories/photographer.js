@@ -8,7 +8,7 @@ function photographerFactory(data) {
         return `
         <article class="profile_article">
             <a href="photographer.html?id=${id}" class="profile_link">
-                <img src="${picture}" class="profile_img" alt="${picture}">
+                <img src="${picture}" class="profile_img" alt="${name}">
                 <h2 class="profile_name">${name}</h2>
             </a>
             <h3 class="profile_location">${city}, ${country}</h3>
