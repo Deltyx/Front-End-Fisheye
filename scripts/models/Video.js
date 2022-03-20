@@ -10,7 +10,7 @@ export default class Video extends Media {
         return `
         <article class="gallery_article" id="${this.id}">
             <video tabindex="1" class="gallery_item" controls>
-                <source src="assets/images/${this.photographer.name}/${this.video}" type="video/mp4" alt="${this.video}">
+                <source src="assets/images/${this.photographer.name}/${this.video}" type="video/mp4" alt="${this.title}">
                 Votre navigateur ne supporte pas les vidéos HTML.
             </video>
             <div class="gallery_item_info">
