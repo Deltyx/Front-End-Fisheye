@@ -53,7 +53,7 @@ export default class Portfolio {
                 <h4>${this.photographer.tagline}</h4>
             </div>
             <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-            <img class="profile_img" src="assets/photographers/${this.photographer.portrait}"></img>
+            <img class="profile_img" src="assets/photographers/${this.photographer.portrait}" alt="${this.photographer.name}"></img>
                 `
     }
 
