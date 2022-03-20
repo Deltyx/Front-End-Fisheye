@@ -26,4 +26,5 @@ Ce projet s'inscrit dans le cadre de la formation "Développeur d'application - 
 
 ## Outils
 
-* [AChecker](https://code.visualstudio.com) - Évaluation de l'accessibilité du site Web.
+* [AChecker](https://achecker.achecks.ca) - Évaluation de l'accessibilité du site Web.
+* [ESLint](https://eslint.org/) - Produire un code JS robuste.
