@@ -17,6 +17,15 @@ async function init() {
     portfolio.display();
     portfolio.listen();
 
+    document.getElementById('form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        console.log({
+            firstName: document.querySelector("#first_name").value,
+            lastName: document.querySelector("#last_name").value,
+            email: document.querySelector("#email").value,
+            message: document.querySelector("#message").value
+      });
+    });
 };
 
 init();

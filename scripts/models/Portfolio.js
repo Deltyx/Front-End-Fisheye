@@ -140,13 +140,14 @@ export default class Portfolio {
         sliderCross.addEventListener('click', () => {
             document.getElementById('slider').style.display = 'none';
         })
+        // Simule un clic lorsque l'utilisateur appui sur la touche Enter si le chevron est focus
         sliderLeft.onkeydown = function(e) {
-            if(e.key === "Enter") { 
+            if(e.key === "Enter" || e.key === "ArrowLeft") { 
                 document.activeElement.click();
             }
         };
         sliderRight.onkeydown = function(e) {
-            if(e.key === "Enter") { 
+            if(e.key === "Enter" || e.key === "ArrowRight") { 
                 document.activeElement.click();
             }
         };
