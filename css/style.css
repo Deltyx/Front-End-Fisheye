@@ -192,7 +192,7 @@ header {
     justify-items: center;
 }
 
-.gallery_item_likes i {
+.gallery_item_likes span {
     margin-left: 5px;
     margin-top: 3px;
     font-size: 22px;
@@ -238,10 +238,11 @@ header {
     justify-items: center;
 }
 
-.profile_sub_info--likes i{
+.profile_sub_info--likes span{
     font-size: 22px;
     margin-top: 14px;
     margin-left: 5px;
+    
 } 
 
 .filter_button {

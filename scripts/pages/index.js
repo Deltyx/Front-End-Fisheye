@@ -1,5 +1,7 @@
+import photographerFactory from "../factories/photographer.js"
+import { getData } from "../utils/common.js"
+
 async function displayData(photographers) {
-    const photographersSection = document.querySelector(".photographer_section");
     let html = '';
     photographers.forEach((photographer) => {
         const photographerModel = photographerFactory(photographer);

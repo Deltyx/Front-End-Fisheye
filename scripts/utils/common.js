@@ -8,3 +8,5 @@ async function getData() {
             .catch(reject);
     });
 }
+
+export { getData };

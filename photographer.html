@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <meta name="language" content="fr">
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
@@ -17,12 +18,12 @@
         <h3>Tirer par</h3>
         <button class="filter_button" id="filter_btn">
           Popularité
-          <i class="fa-solid fa-chevron-down"></i>
+          <span class="fa fa-solid fa-chevron-down"></span>
         </button>
         <div class="filter_list_content" id="filter_dropdown">
           <button class="filter_button-options" id="filter-options-1" data-filter="Popularity">
             Popularité
-            <i class="fa-solid fa-chevron-down"></i>
+            <span class="fa fa-solid fa-chevron-up"></span>
           </button>
           <div class="filter_separator"></div>
           <button class="filter_button-options" id="filter-options-2" data-filter="Date">Date</button>
@@ -32,9 +33,9 @@
       </section>
       <section class="photograph-gallery"id="gallery"></section>
       <section class="gallery_slider" id="slider">
-        <i tabindex="1" class="fas fa-chevron-left" id="slider-left"></i>
+        <span tabindex="1" class="fas fa-chevron-left" id="slider-left"></span>
         <div class="gallery_slider-img" id="slider-img"></div>
-        <i tabindex="1" class="fas fa-chevron-right" id="slider-right"></i>
+        <span tabindex="1" class="fas fa-chevron-right" id="slider-right"></span>
         <div tabindex="1" class="gallery_slider-cross" id="slider-cross">&#10006;</div>
       </section>
       <section class="photograph-info"id="info"></section>
@@ -66,9 +67,6 @@
 				</form>
 			</div>
 		</div>
-    
-    <script src="scripts/utils/contactForm.js"></script>
-    <script src="scripts/utils/common.js"></script>
     <script src="scripts/pages/photographer.js" type="module"></script>
   </body>
 </html>

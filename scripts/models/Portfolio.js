@@ -77,7 +77,7 @@ export default class Portfolio {
                     btn_dropdown.style.display = 'none';
                     btn.innerHTML = `
                     ${this.options[order.toLowerCase()]}
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <i class="fa fa-solid fa-chevron-down"></i>
                     `;
                 })
             })
@@ -141,16 +141,16 @@ export default class Portfolio {
             document.getElementById('slider').style.display = 'none';
         })
         // Simule un clic lorsque l'utilisateur appui sur la touche Enter si le chevron est focus
-        sliderLeft.onkeydown = function(e) {
-            if(e.key === "Enter" || e.key === "ArrowLeft") { 
-                document.activeElement.click();
+        document.addEventListener('keydown', (e) => {
+            console.log("salut");
+            if(e.key === "ArrowLeft") { 
+                this.goToPrevious();
             }
-        };
-        sliderRight.onkeydown = function(e) {
-            if(e.key === "Enter" || e.key === "ArrowRight") { 
-                document.activeElement.click();
+            console.log("salut2");
+            if(e.key === "ArrowRight") { 
+                this.goToNext();
             }
-        };
+        });
         sliderCross.onkeydown = function(e) {
             if(e.key === "Enter") { 
                 document.activeElement.click();
@@ -175,7 +175,7 @@ export default class Portfolio {
             <div class="profile_sub_info">
                 <div class="profile_sub_info--likes">
                     <h3>${this.totalLikes}</h3>
-                    <i class="fas fa-heart"></i>
+                    <span class="fas fa-heart"></span>
                 </div>
                 <h3>${this.photographer.price}€ / jour</h3>
             </div>

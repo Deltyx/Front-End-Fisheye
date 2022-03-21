@@ -1,4 +1,4 @@
-import Media from '../models/Media.js';
+import { getData } from '../utils/common.js';
 import Portfolio from '../models/Portfolio.js';
 import Photographer from '../models/Photographer.js';
 
@@ -26,7 +26,7 @@ async function init() {
             message: document.querySelector("#message").value
       });
     });
-};
+}
 
 init();
 

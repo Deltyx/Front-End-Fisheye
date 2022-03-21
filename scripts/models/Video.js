@@ -17,7 +17,7 @@ export default class Video extends Media {
                 <h3>${this.title}</h3>
                 <div class="gallery_item_likes">
                     <h3>${this.likes}</h3>
-                    <i tabindex="1" class="fas fa-heart" aria-label="likes"></i> 
+                    <span tabindex="1" class="fas fa-heart" aria-label="likes"></span> 
                 </div> 
             </div>
         </article>                     
