@@ -33,18 +33,18 @@
       </section>
       <section class="photograph-gallery"id="gallery"></section>
       <section class="gallery_slider" id="slider">
-        <span tabindex="1" class="fas fa-chevron-left" id="slider-left"></span>
+        <span tabindex="0" class="fas fa-chevron-left" id="slider-left"></span>
         <div class="gallery_slider-img" id="slider-img"></div>
-        <span tabindex="1" class="fas fa-chevron-right" id="slider-right"></span>
-        <div tabindex="1" class="gallery_slider-cross" id="slider-cross">&#10006;</div>
+        <span tabindex="0" class="fas fa-chevron-right" id="slider-right"></span>
+        <div tabindex="0" class="gallery_slider-cross" id="slider-cross">&#10006;</div>
       </section>
       <section class="photograph-info"id="info"></section>
     </main>
     <div id="contact_modal" class="contact_form">
 			<div class="modal">
 				<header>
-          <h2>Contactez-moi</h2>
-          <img tabindex="0" src="assets/icons/close.svg" alt="closing_cross" onclick="closeModal()" />
+          <h2 id="modal-label">Contactez-moi</h2>
+          <img tabindex="0" id="modal-cross" src="assets/icons/close.svg" alt="closing_cross"/>
         </header>
 				<form id='form'>
 					<div>

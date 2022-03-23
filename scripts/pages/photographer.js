@@ -12,10 +12,12 @@ async function init() {
     const data = await getData();
     const photographer = new Photographer(data.photographers.find(data => data.id == getId()));
     const portfolio = new Portfolio(photographer);
-
+    
     portfolio.hydrate(data.media);
     portfolio.display();
     portfolio.listen();
+
+    document.getElementById('modal-label').innerText =  "Contactez moi \n" + portfolio.photographer.name;
 
     document.getElementById('form').addEventListener('submit', function (e) {
         e.preventDefault();

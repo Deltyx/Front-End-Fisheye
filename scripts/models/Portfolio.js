@@ -52,7 +52,7 @@ export default class Portfolio {
                 <h3>${this.photographer.city}, ${this.photographer.country}</h3>
                 <h4>${this.photographer.tagline}</h4>
             </div>
-            <button class="contact_button" onclick="displayModal()" aria-label="Contactez moi">Contactez-moi</button>
+            <button id="contact_btn" class="contact_button" aria-label="Contactez moi">Contactez-moi</button>
             <img class="profile_img" src="assets/photographers/${this.photographer.portrait}" alt="${this.photographer.name}"></img>
                 `
     }
@@ -60,6 +60,33 @@ export default class Portfolio {
     listen() {
         this.listenDropdown();
         this.listenForSlider();
+        this.closeModalListener();
+        this.displayModalListener();
+    }
+
+    closeModalListener() {
+        let modal = document.getElementById("contact_modal");
+        document.getElementById('modal-cross').addEventListener('click', () => {
+            modal.style.display = "none";
+        })
+        document.getElementById('modal-cross').onkeydown = function(e) {
+            if(e.key === "Enter") { 
+                document.activeElement.click();
+            }
+        };
+    }
+    
+    displayModalListener() {
+        let modal = document.getElementById("contact_modal");
+        document.getElementById('contact_btn').addEventListener('click', () => {
+            modal.style.display = "block";
+            document.getElementById('first_name').focus();
+        })
+        document.getElementById('contact_btn').onkeydown = function(e) {
+            if(e.key === "Enter") { 
+                document.activeElement.click();
+            }
+        };
     }
 
     listenDropdown() {
@@ -142,11 +169,9 @@ export default class Portfolio {
         })
         // Simule un clic lorsque l'utilisateur appui sur la touche Enter si le chevron est focus
         document.addEventListener('keydown', (e) => {
-            console.log("salut");
             if(e.key === "ArrowLeft") { 
                 this.goToPrevious();
             }
-            console.log("salut2");
             if(e.key === "ArrowRight") { 
                 this.goToNext();
             }

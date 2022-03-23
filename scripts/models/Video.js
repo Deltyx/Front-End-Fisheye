@@ -9,7 +9,7 @@ export default class Video extends Media {
     render() {
         return `
         <article class="gallery_article" id="${this.id}">
-            <video tabindex="1" class="gallery_item" controls>
+            <video tabindex="0" class="gallery_item" controls>
                 <source src="assets/images/${this.photographer.name}/${this.video}" type="video/mp4" alt="${this.title}">
                 Votre navigateur ne supporte pas les vidéos HTML.
             </video>
@@ -17,7 +17,7 @@ export default class Video extends Media {
                 <h3>${this.title}</h3>
                 <div class="gallery_item_likes">
                     <h3>${this.likes}</h3>
-                    <span tabindex="1" class="fas fa-heart" aria-label="likes"></span> 
+                    <span tabindex="0" class="fas fa-heart" aria-label="likes"></span> 
                 </div> 
             </div>
         </article>                     

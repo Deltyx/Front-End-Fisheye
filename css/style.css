@@ -366,7 +366,8 @@ header {
 .fa-chevron-right:focus,
 .gallery_slider-cross:focus,
 .gallery_item:focus,
-.fa-heart:focus {
+.fa-heart:focus,
+#modal-cross:focus {
     border: 2px solid var(--dark-color);        
 }
 
